@@ -1,0 +1,1 @@
+A simple app to generate receipt built with Reactjs and TailwindCSS
