@@ -1,4 +1,5 @@
 # Simple receipt
+A simple receipt app built with Reactjs and TailwindCSS
 
 ## Screenshots
 ![Screenshot (10)](https://github.com/tttooii/simple-receipt/assets/19700222/0456f63c-4607-4534-b0fd-6d5b3077af4d)
