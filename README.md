@@ -1,6 +1,6 @@
 # Simple receipt
 
 ## Screenshots
-![Screenshot (5)](https://github.com/tttooii/simple-receipt/assets/19700222/4e21dc11-1ae1-4821-bd1c-39bf02e991ed)
-![Screenshot (6)](https://github.com/tttooii/simple-receipt/assets/19700222/22161c42-d01f-4755-aba1-4ec51a29a272)
-![Screenshot (7)](https://github.com/tttooii/simple-receipt/assets/19700222/53dc8d36-5d59-41e9-b0b3-2c57db493f83)
+![Screenshot (10)](https://github.com/tttooii/simple-receipt/assets/19700222/0456f63c-4607-4534-b0fd-6d5b3077af4d)
+![Screenshot (8)](https://github.com/tttooii/simple-receipt/assets/19700222/1fc6eaf8-b62f-4161-ac39-5f89e2f70004)
+![Screenshot (9)](https://github.com/tttooii/simple-receipt/assets/19700222/bbfad818-96f1-4b78-afa8-e68268273d95)
