@@ -34,12 +34,10 @@ const ReceiptForm = () => {
     setItems(data);
   }
     
-
   const deleteItemHandler = (id) => {
     let data = [...items];
     data.splice(id, 1);
     setItems(data);
-    console.log(id)
   };
 
   const total = items.reduce((prev, curr) => {
