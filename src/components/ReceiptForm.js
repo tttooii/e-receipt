@@ -156,14 +156,14 @@ const ReceiptForm = () => {
               }}
               items={items}
             />
-            <div className="flex flex-col items-end border-t border-gray-900/10">
-              <div className="flex justify-between w-full pt-2 md:w-1/2">
-                <span className="font-bold">Total:</span>
+            <div className="border-t border-gray-900/10">
+              <div className='flex flex-row justify-end w-full gap-8 pr-12'>
+              <span className="font-bold">Total:</span>
                 <span className="font-bold">
                 ₹{total % 1 === 0 ? total : total.toFixed(2)}
               </span>
+              </div>
             </div>
-          </div>
         </div>
       </form>
      );
