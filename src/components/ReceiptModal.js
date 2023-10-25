@@ -107,25 +107,25 @@ const ReceiptModal = ({ isOpen, setIsOpen, receiptInfo, items }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="my-8 inline-block w-full max-w-md transform overflow-hidden rounded-lg bg-white text-left align-middle shadow-xl transition-all">
+              <div className="inline-block w-full max-w-md my-8 overflow-hidden text-left align-middle transition-all transform bg-white rounded-lg shadow-xl">
                 <div className="p-4" id="print">
-                  <h1 className="text-center text-lg font-bold text-gray-900">
-                    RECEIPT
+                  <h1 className="text-lg font-bold text-center text-gray-900">
+                    E-receipt
                   </h1>
-                  <h1 className="text-center text-lg font-bold text-gray-900 mt-4">
+                  <h1 className="mt-4 text-lg font-bold text-gray-900">
                   {receiptInfo.businessName}
                   </h1>
                   <div className="mt-6">
-                    <div className="mb-4 grid grid-cols-2">
+                    <div className="grid grid-cols-2 mb-4">
                       <span className="font-bold text-red-500">Receipt Number:</span>
-                      <span className='text-red-500 font-bold'>{receiptInfo.receiptNo}</span>
+                      <span className='font-bold text-red-500'>{receiptInfo.receiptNo}</span>
                       <span className="font-bold">Received from:</span>
                       <span>{receiptInfo.customerName}</span>
                     </div>
   
                     <table className="w-full text-left">
                       <thead>
-                        <tr className="border-y border-black/10 text-sm md:text-base">
+                        <tr className="text-sm border-y border-black/10 md:text-base">
                           <th>ITEM</th>
                           <th className="text-center">QTY</th>
                           <th className="text-right">PRICE</th>
@@ -151,8 +151,8 @@ const ReceiptModal = ({ isOpen, setIsOpen, receiptInfo, items }) => {
                       </tbody>
                     </table>
   
-                    <div className="mt-4 flex flex-col items-end space-y-2">
-                      <div className="flex w-full justify-between border-t border-black/10 py-2">
+                    <div className="flex flex-col items-end mt-4 space-y-2">
+                      <div className="flex justify-between w-full py-2 border-t border-black/10">
                         <span className="font-bold">Total:</span>
                         <span className="font-bold">
                         ₹
@@ -164,14 +164,14 @@ const ReceiptModal = ({ isOpen, setIsOpen, receiptInfo, items }) => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-4 flex space-x-2 px-4 pb-6">
+                <div className="flex px-4 pb-6 mt-4 space-x-2">
                   <button
-                    className="flex w-full items-center justify-center space-x-1 rounded-md border border-blue-500 py-2 text-sm text-blue-500 shadow-sm hover:bg-blue-500 hover:text-white"
+                    className="flex items-center justify-center w-full py-2 space-x-1 text-sm text-blue-500 border border-blue-500 rounded-md shadow-sm hover:bg-blue-500 hover:text-white"
                     onClick={SaveAsPDFHandler}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4"
+                      className="w-4 h-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
