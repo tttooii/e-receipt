@@ -56,8 +56,9 @@ const ReceiptForm = () => {
 
     return ( 
         <form className="flex">
-          <div className="my-6 flex-1 space-y-2  rounded-md bg-white p-4 shadow-sm sm:space-y-4 md:p-6">
-            <div className="flex flex-col justify-between space-y-2 border-b border-gray-900/10 pb-4 md:flex-row md:items-center md:space-y-0">
+          <div className="flex-1 p-4 my-6 space-y-2 bg-white rounded-md shadow-sm sm:space-y-4 md:p-6">
+            <h2 className='mb-8 text-2xl font-bold text-center'>E-receipt</h2>
+            <div className="flex flex-col justify-between pb-4 space-y-2 border-b border-gray-900/10 md:flex-row md:items-center md:space-y-0">
               <div className="flex space-x-2">
                 <span className="font-bold">Date: </span>
                 <span className="font-bold">{today}</span>
@@ -76,43 +77,47 @@ const ReceiptForm = () => {
                 />
               </div>
             </div>
-            <h1 className="text-center text-lg font-bold">RECEIPT</h1>
-            <div className="grid grid-cols-2 gap-2 pt-4 pb-8">
-              <label
-                htmlFor="cashierName"
-                className="text-sm font-bold sm:text-base"
-              >
-                Business:
-              </label>
-              <input
-                required
-                className="flex-1"
-                placeholder="Business name"
-                type="text"
-                name="businessName"
-                id="businessName"
-                value={businessName || ''}
-                onChange={(e) => setBusinessName(e.target.value)}
-              />
-              <label
-                htmlFor="customerName"
-                className="col-start-2 row-start-1 text-sm font-bold md:text-base"
-              >
-                Customer:
-              </label>
-              <input
-                required
-                className="flex-1"
-                placeholder="Customer name"
-                type="text"
-                name="customerName"
-                value={customerName || ''}
-                onChange={(e) => setCustomerName(e.target.value)}
-              />
+            <h1 className="text-lg font-bold text-center">RECEIPT</h1>
+            <div className="grid grid-cols-1 gap-2 pt-4 pb-8 md:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="cashierName"
+                  className="text-sm font-bold sm:text-base"
+                >
+                  Business:
+                </label>
+                <input
+                  required
+                  className="flex-1 p-2"
+                  placeholder="Business name"
+                  type="text"
+                  name="businessName"
+                  id="businessName"
+                  value={businessName || ''}
+                  onChange={(e) => setBusinessName(e.target.value)}
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="customerName"
+                  className="col-start-2 row-start-1 text-sm font-bold md:text-base"
+                  >
+                    Customer:
+                </label>
+                <input
+                  required
+                  className="flex-1 p-2"
+                  placeholder="Customer name"
+                  type="text"
+                  name="customerName"
+                  value={customerName || ''}
+                  onChange={(e) => setCustomerName(e.target.value)}
+                />
+              </div>
             </div>
             <table className="w-full p-4 text-left">
               <thead>
-                  <tr className="border-b border-gray-300 text-sm md:text-base">
+                  <tr className="text-sm border-b border-gray-300 md:text-base">
                       <th>ITEM</th>
                       <th>QTY</th>
                       <th className="text-center">PRICE</th>
@@ -128,14 +133,14 @@ const ReceiptForm = () => {
               </tbody>
             </table>
             <button
-              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white shadow-sm hover:bg-blue-600"
+              className="px-4 py-2 text-sm text-white bg-blue-500 rounded-md shadow-sm hover:bg-blue-600"
               type="button"
               onClick={addItem}
             >
               Add Item
             </button>
             <button
-              className="rounded-md bg-blue-500 px-4 py-2 text-sm text-white shadow-sm hover:bg-blue-600 ml-4"
+              className="px-4 py-2 ml-4 text-sm text-white bg-blue-500 rounded-md shadow-sm hover:bg-blue-600"
               type="button" onClick={reviewInvoiceHandler}
             >
               Preview
@@ -152,7 +157,7 @@ const ReceiptForm = () => {
               items={items}
             />
             <div className="flex flex-col items-end border-t border-gray-900/10">
-              <div className="flex w-full justify-between pt-2 md:w-1/2">
+              <div className="flex justify-between w-full pt-2 md:w-1/2">
                 <span className="font-bold">Total:</span>
                 <span className="font-bold">
                 ₹{total % 1 === 0 ? total : total.toFixed(2)}

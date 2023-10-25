@@ -12,6 +12,7 @@ const ReceiptItem = ({items, handleFormChange, deleteItemHandler}) => {
                             name="item_name" 
                             value={item.item_name}
                             onChange={(e) => handleFormChange(id, e)}
+                            className="p-2"
                         />
                     </td>
                     <td className="w-[75px]">
@@ -21,13 +22,14 @@ const ReceiptItem = ({items, handleFormChange, deleteItemHandler}) => {
                             value={item.qty}
                             min={1}
                             onChange={(e) => handleFormChange(id, e)}
+                            className="p-2"
                             
                         />
                     </td>
                     <td className="w-[100px] relative">
                         <FaIndianRupeeSign className="absolute mt-2"/>
                         <input
-                            className="px-5" 
+                            className="px-5 py-2" 
                             type="number" 
                             name="price" 
                             value={item.price}
@@ -37,12 +39,12 @@ const ReceiptItem = ({items, handleFormChange, deleteItemHandler}) => {
                     </td>
                     <td className="flex items-center justify-center">
                         <button
-                        className="rounded-md bg-red-500 p-2 text-white shadow-sm transition-colors duration-200 hover:bg-red-600"
+                        className="p-2 text-white transition-colors duration-200 bg-red-500 rounded-md shadow-sm hover:bg-red-600"
                         onClick={() => deleteItemHandler(id)}
                         >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
+                            className="w-5 h-5"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"

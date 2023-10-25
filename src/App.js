@@ -2,8 +2,8 @@ import ReceiptForm from './components/ReceiptForm';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="mx-auto max-w-2xl">
+    <div className="min-h-screen bg-neutral-300">
+      <div className="max-w-screen-md p-4 pt-24 mx-auto">
         <ReceiptForm/>
       </div>
     </div>
